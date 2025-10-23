@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verde Ação</title>
+</head>
+<body>
+    <header>
+        <div class="box-header">
+        <h1>Verde Ação</h1>
+        <p>Ser voluntário na Verde Ação é plantar esperança e colher transformação. Juntos, cuidamos do planeta e inspiramos mudanças reais!</p>
+        <button>Quero ser voluntuntario</button>
+        </div>
+    </header>
+    <main>
+        <section class="cards">
+            <article >
+                <img src="./img/girassol.jpg" alt="imagem de um girassol">
+                <h3>Plantio de mudas</h3>
+                <p>Cada muda plantada ajuda a restaurar o meio ambiente</p>
+                <button>Ver mais</button>
+            </article>
+            <article >
+                <img src="./img/reciclagem.jpg" alt="imagem de um girassol">
+                <h3>Educação Ambiental</h3>
+                <p>Promove oficinas e rodas de conversas</p>
+                <button>Ver mais</button>
+            </article>
+            <article >
+                <img src="./img/artigo.png" alt="imagem de um girassol">
+                <h3>Cuidados</h3>
+                <p>Ajude a manter areas preservadas</p>
+                <button>Ver mais</button>
+            </article>
+            <article >
+                <img src="./img/florestas.png" alt="imagem de um girassol">
+                <h3>Mapeamento</h3>
+                <p>Indentifique areas que precisam de mapeamento</p>
+                <button>Ver mais</button>
+            </article> 
+        </section>
+        <section class="form">            
+            <h2>Cadastre-se como voluntário</h2>
+            <p>Faça parte de ações que transformam o mundo. Com pequenas atitudes, você pode gerar grandes impactos na natureza e na comunidade.</p>
+            <form action="">
+                <input id="nome" type="text" name="nome" placeholder="Nome" pattern="^[A-Za-zÀ-ÿ\s]{3,50}$" title="O nome deve conter apenas letras e espaços (minimo 3 caracteres)"/>
+                <input id="email" type="email" name="email" placeholder="E-mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$" title="Digite um e-mail válido."/>
+                <input id="cidade" type="text" name="cidade" placeholder="Cidade"/>
+                
+                <select id="atividade" name="atividade" required>
+                <option value="" disabled selected hidden>Selecione atividade</option>
+                <option value="plantio">Plantio de árvores</option>
+                <option value="limpeza">Limpeza de praias</option>
+                <option value="doacao">Doação de roupas/alimentos</option>
+                <option value="educacao">Educação ambiental</option>
+                </select>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>   
+        <section class="footer">
+            <footer>© todos os direitos reservados</footer>
+        </section>    
+        
+
+    </main>
+    
+</body>
+</html>
