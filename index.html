@@ -1,71 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verde Ação: projeto educacional sobre voluntariado e preservação ambiental.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Verde Ação</title>
 </head>
 <body>
-    <header>
+    <header class="hero">
         <div class="box-header">
-        <h1>Verde Ação</h1>
-        <p>Ser voluntário na Verde Ação é plantar esperança e colher transformação. Juntos, cuidamos do planeta e inspiramos mudanças reais!</p>
-        <button>Quero ser voluntuntario</button>
+            <h1>Verde Ação</h1>
+            <p>Ser voluntário na Verde Ação é plantar esperança e colher transformação. Juntos, cuidamos do planeta e inspiramos mudanças reais!</p>
+            <a class="button" href="#voluntariado">Quero ser voluntário</a>
         </div>
     </header>
-    <main>
-        <section class="cards">
-            <article >
-                <img src="./img/girassol.jpg" alt="imagem de um girassol">
-                <h3>Plantio de mudas</h3>
-                <p>Cada muda plantada ajuda a restaurar o meio ambiente</p>
-                <button>Ver mais</button>
-            </article>
-            <article >
-                <img src="./img/reciclagem.jpg" alt="imagem de um girassol">
-                <h3>Educação Ambiental</h3>
-                <p>Promove oficinas e rodas de conversas</p>
-                <button>Ver mais</button>
-            </article>
-            <article >
-                <img src="./img/artigo.png" alt="imagem de um girassol">
-                <h3>Cuidados</h3>
-                <p>Ajude a manter areas preservadas</p>
-                <button>Ver mais</button>
-            </article>
-            <article >
-                <img src="./img/florestas.png" alt="imagem de um girassol">
-                <h3>Mapeamento</h3>
-                <p>Indentifique areas que precisam de mapeamento</p>
-                <button>Ver mais</button>
-            </article> 
-        </section>
-        <section class="form">            
-            <h2>Cadastre-se como voluntário</h2>
-            <p>Faça parte de ações que transformam o mundo. Com pequenas atitudes, você pode gerar grandes impactos na natureza e na comunidade.</p>
-            <form action="">
-                <input id="nome" type="text" name="nome" placeholder="Nome" pattern="^[A-Za-zÀ-ÿ\s]{3,50}$" title="O nome deve conter apenas letras e espaços (minimo 3 caracteres)"/>
-                <input id="email" type="email" name="email" placeholder="E-mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$" title="Digite um e-mail válido."/>
-                <input id="cidade" type="text" name="cidade" placeholder="Cidade"/>
-                
-                <select id="atividade" name="atividade" required>
-                <option value="" disabled selected hidden>Selecione atividade</option>
-                <option value="plantio">Plantio de árvores</option>
-                <option value="limpeza">Limpeza de praias</option>
-                <option value="doacao">Doação de roupas/alimentos</option>
-                <option value="educacao">Educação ambiental</option>
-                </select>
-                
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>   
-        <section class="footer">
-            <footer>© todos os direitos reservados</footer>
-        </section>    
-        
 
+    <main>
+        <section class="cards" aria-labelledby="acoes-title">
+            <h2 class="sr-only" id="acoes-title">Ações ambientais</h2>
+
+            <article>
+                <img src="./img/girassol.jpg" alt="Girassol em meio à vegetação" width="308" height="180">
+                <div class="card-content">
+                    <h3>Plantio de mudas</h3>
+                    <p>Cada muda plantada ajuda a restaurar o meio ambiente.</p>
+                    <details>
+                        <summary>Ver mais</summary>
+                        <p>Participe de ações de plantio e ajude a ampliar áreas verdes na comunidade.</p>
+                    </details>
+                </div>
+            </article>
+
+            <article>
+                <img src="./img/reciclagem.jpg" alt="Materiais separados para reciclagem" width="308" height="180">
+                <div class="card-content">
+                    <h3>Educação ambiental</h3>
+                    <p>Promove oficinas e rodas de conversa.</p>
+                    <details>
+                        <summary>Ver mais</summary>
+                        <p>Compartilhe práticas sustentáveis e incentive o descarte correto de resíduos.</p>
+                    </details>
+                </div>
+            </article>
+
+            <article>
+                <img src="./img/artigo.webp" alt="Pessoa cuidando de uma área verde" width="308" height="180">
+                <div class="card-content">
+                    <h3>Cuidados</h3>
+                    <p>Ajude a manter áreas preservadas.</p>
+                    <details>
+                        <summary>Ver mais</summary>
+                        <p>Colabore com mutirões de limpeza, conservação e conscientização ambiental.</p>
+                    </details>
+                </div>
+            </article>
+
+            <article>
+                <img src="./img/florestas.png" alt="Vista aérea de uma área florestal" width="308" height="180">
+                <div class="card-content">
+                    <h3>Mapeamento</h3>
+                    <p>Identifique áreas que precisam de atenção.</p>
+                    <details>
+                        <summary>Ver mais</summary>
+                        <p>Ajude a registrar locais que podem receber ações de recuperação ambiental.</p>
+                    </details>
+                </div>
+            </article>
+        </section>
+
+        <section class="form-section" id="voluntariado" aria-labelledby="form-title">
+            <h2 id="form-title">Cadastre-se como voluntário</h2>
+            <p>Faça parte de ações que transformam o mundo. Com pequenas atitudes, você pode gerar grandes impactos na natureza e na comunidade.</p>
+
+            <form id="volunteer-form">
+                <div class="field">
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" name="nome" placeholder="Digite seu nome" autocomplete="name" minlength="3" maxlength="50" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="nome@exemplo.com" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" type="text" name="cidade" placeholder="Digite sua cidade" autocomplete="address-level2" minlength="2" maxlength="60" required>
+                </div>
+
+                <div class="field">
+                    <label for="atividade">Atividade de interesse</label>
+                    <select id="atividade" name="atividade" required>
+                        <option value="">Selecione uma atividade</option>
+                        <option value="plantio">Plantio de árvores</option>
+                        <option value="limpeza">Limpeza de praias</option>
+                        <option value="doacao">Doação de roupas e alimentos</option>
+                        <option value="educacao">Educação ambiental</option>
+                    </select>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+                <p class="form-note">Formulário demonstrativo: os dados não são enviados nem armazenados.</p>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
     </main>
-    
+
+    <footer>
+        <p>Projeto educacional Verde Ação • <span id="current-year"></span></p>
+    </footer>
 </body>
 </html>
