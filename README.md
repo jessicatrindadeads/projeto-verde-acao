@@ -1,42 +1,78 @@
 # Verde Ação 🌱
 
-**Verde Ação** é um projeto do curso de fullstack da escola Vai na Web.  
+Landing page educacional sobre voluntariado e preservação ambiental, desenvolvida durante a formação Full Stack do Vai na Web.
 
----
+O projeto demonstra estrutura semântica com HTML, estilização responsiva em SCSS e interações básicas com JavaScript, mantendo o formulário como uma simulação Front-end.
 
-## 🌟 Funcionalidades Implementadas
+## Funcionalidades
 
-- **Header com mensagem de boas-vindas** e botão de chamada para ação  
-  ![Header Verde Ação](./img/banner-screenshot.png)
+- Apresentação das ações ambientais em cards responsivos.
+- Conteúdo expansível com o elemento nativo `details`.
+- Botão principal com navegação até o formulário.
+- Formulário acessível com labels e validação nativa.
+- Confirmação demonstrativa de cadastro sem envio ou armazenamento de dados.
+- Layout adaptado para desktop, tablet e celular.
+- Navegação por teclado e estilos de foco visíveis.
 
-- **Seção de cards** apresentando atividades:
-  - Plantio de mudas ![Plantio](./img/girassol.jpg)
-  - Educação ambiental ![Educação Ambiental](./img/reciclagem.jpg)
-  - Cuidados com áreas preservadas ![Cuidados](./img/artigo.png)
-  - Mapeamento de áreas ![Mapeamento](./img/florestas.png)
+> Este é um projeto educacional. O formulário não possui backend e não envia dados.
 
-- **Formulário de cadastro de voluntários**:
-  - Campos: Nome, E-mail, Cidade, Atividade
-  - Validação básica nos inputs  
-  ![Formulário de cadastro](./img/form-screenshot.png)
+## Tecnologias
 
-- **Footer simples** com direitos reservados
+- HTML5
+- SCSS e CSS3
+- JavaScript
+- Sass
+- HTML Validate
+- GitHub Actions
 
-- **Estilização responsiva** usando CSS moderno, cores, sombras e botões interativos
+## Como executar
 
----
+Clone o repositório:
 
-## 🎨 Tecnologias Utilizadas
-
-- **HTML5** – Estrutura do site
-- **CSS3 / SCSS** – Estilização e layout responsivo
-- **Google Fonts** – Inter e Roboto para tipografia
-- Layout flexível com **cards**, **botões chamativos** e **formulário centralizado**
-
----
-
-## 💻 Como Executar
-
-1. Clone o repositório:
 ```bash
-git clone https://github.com/SEU-USUARIO/projeto-verde-acao.git
+git clone https://github.com/jessicatrindadeads/projeto-verde-acao.git
+cd projeto-verde-acao
+```
+
+Abra o arquivo `index.html` no navegador.
+
+## Desenvolvimento
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Compile o SCSS:
+
+```bash
+npm run build
+```
+
+Valide o HTML:
+
+```bash
+npm run check
+```
+
+O GitHub Actions executa a validação do HTML e a compilação do SCSS a cada Pull Request e atualização da branch `main`.
+
+## Estrutura
+
+```text
+.
+├── .github/workflows/ci.yml
+├── img/
+├── index.html
+├── script.js
+├── style.scss
+├── style.css
+└── package.json
+```
+
+## Autora
+
+**Jéssica Trindade**
+
+[GitHub](https://github.com/jessicatrindadeads) • [LinkedIn](https://www.linkedin.com/in/jessicatrindadeads/)
